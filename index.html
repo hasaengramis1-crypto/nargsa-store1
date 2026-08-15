@@ -284,16 +284,15 @@
             border-color: var(--primary-rose);
         }
 
-        .cat-icon-box svg {
-            width: 28px;
-            height: 28px;
-            fill: #c96b7d;
+        .cat-icon-box i {
+            font-size: 22px;
+            color: #c96b7d;
             transition: 0.2s;
         }
 
-        .cat-item.active .cat-icon-box svg,
-        .cat-item:hover .cat-icon-box svg {
-            fill: #ffffff;
+        .cat-item.active .cat-icon-box i,
+        .cat-item:hover .cat-icon-box i {
+            color: #ffffff;
         }
 
         .cat-item span {
@@ -367,7 +366,7 @@
             .circle-categories {
                 justify-content: center;
                 width: 100%;
-                gap: 35px;
+                gap: 30px;
             }
             .circle-categories-wrapper {
                 overflow-x: visible;
@@ -379,9 +378,8 @@
                 width: 75px;
                 height: 75px;
             }
-            .cat-icon-box svg {
-                width: 32px;
-                height: 32px;
+            .cat-icon-box i {
+                font-size: 26px;
             }
             .cat-item span {
                 font-size: 13px;
@@ -460,17 +458,18 @@
         .admin-actions {
             display: flex;
             gap: 4px;
-            margin-top: 5px;
+            margin-top: 6px;
         }
 
         .btn-edit, .btn-delete {
             flex: 1;
-            padding: 3px;
+            padding: 4px;
             font-size: 9px;
             border: none;
             border-radius: 3px;
             cursor: pointer;
             color: white;
+            font-weight: bold;
         }
 
         .btn-edit { background: #5b9bd5; }
@@ -805,10 +804,9 @@
             <a onclick="filterCategory('العطور')" class="nav-item">العطور</a>
             <a onclick="filterCategory('المكياج')" class="nav-item">المكياج</a>
             <a onclick="filterCategory('العناية')" class="nav-item">العناية</a>
-            <a onclick="filterCategory('الهدايا')" class="nav-item">الهدايا</a>
-            <a onclick="filterCategory('الإكسسوارات')" class="nav-item">الإكسسوارات</a>
-            <a onclick="filterCategory('الديكور')" class="nav-item">الديكور</a>
-            <a onclick="filterCategory('العروض')" class="nav-item">العروض</a>
+            <a onclick="filterCategory('ايس كوفي')" class="nav-item">ايس كوفي</a>
+            <a onclick="filterCategory('بوكسات')" class="nav-item">بوكسات</a>
+            <a onclick="filterCategory('قاصات')" class="nav-item">قاصات</a>
         </nav>
     </header>
 
@@ -828,51 +826,45 @@
         <div class="circle-categories">
             <a class="cat-item active" onclick="filterCategory('الكل')">
                 <div class="cat-icon-box">
-                    <i class="fa-solid fa-border-all" style="font-size:20px; color:#c96b7d;"></i>
+                    <i class="fa-solid fa-border-all"></i>
                 </div>
                 <span>الكل</span>
             </a>
             <a class="cat-item" onclick="filterCategory('العطور')">
                 <div class="cat-icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2v1.07A7.002 7.002 0 0 1 19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7a7.002 7.002 0 0 1 5-6.93V4a2 2 0 0 1 2-2zm0 2a1 1 0 0 0-1 1v1.07c.33-.04.66-.07 1-.07s.67.03 1 .07V5a1 1 0 0 0-1-1zm-5 9v6h10v-6a5 5 0 0 0-10 0z"/></svg>
+                    <i class="fa-solid fa-spray-can-sparkles"></i>
                 </div>
                 <span>العطور</span>
             </a>
             <a class="cat-item" onclick="filterCategory('المكياج')">
                 <div class="cat-icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M18 2a2 2 0 0 1 2 2v2h-4V4a2 2 0 0 1 2-2zm-2 6h4v3H6V8h10zm-10 5h12v7a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-7zm3 2v3h6v-3H9z"/></svg>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
                 </div>
                 <span>المكياج</span>
             </a>
             <a class="cat-item" onclick="filterCategory('العناية')">
                 <div class="cat-icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V19a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7zm0 2a5 5 0 0 0-5 5c0 1.66.82 3.13 2.07 4.04L10 14.5V19h4v-4.5l.93-.46C16.18 12.13 17 10.66 17 9a5 5 0 0 0-5-5z"/></svg>
+                    <i class="fa-solid fa-pump-soap"></i>
                 </div>
                 <span>العناية</span>
             </a>
-            <a class="cat-item" onclick="filterCategory('الهدايا')">
+            <a class="cat-item" onclick="filterCategory('ايس كوفي')">
                 <div class="cat-icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M19 10h-5V5h4a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-4a2 2 0 0 0-2 2v2H9V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h4v5H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7h1a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1zM5 14h5v7H5v-7zm14 7h-5v-7h5v7z"/></svg>
+                    <i class="fa-solid fa-mug-hot"></i>
                 </div>
-                <span>الهدايا</span>
+                <span>ايس كوفي</span>
             </a>
-            <a class="cat-item" onclick="filterCategory('الإكسسوارات')">
+            <a class="cat-item" onclick="filterCategory('بوكسات')">
                 <div class="cat-icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 3.995 3.8l.005.2a4 4 0 0 1-3.792 3.995L12 10H7.5A3.5 3.5 0 0 0 4 13.5v2.81a6.002 6.002 0 0 0 7 5.92V24h2v-1.77a6.002 6.002 0 0 0 7-5.92V13.5A5.5 5.5 0 0 0 14.5 8h-2.5a2 2 0 0 1-2-1.85L10 6a2 2 0 0 1 1.85-1.995L12 4a2 2 0 0 1 2 1.85L14.005 6H16a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2h2a2 2 0 0 1 2-2zm-3 14h6a4 4 0 0 1 4 4v1H5v-1a4 4 0 0 1 4-4z"/></svg>
+                    <i class="fa-solid fa-box-open"></i>
                 </div>
-                <span>الإكسسوارات</span>
+                <span>بوكسات</span>
             </a>
-            <a class="cat-item" onclick="filterCategory('الديكور')">
+            <a class="cat-item" onclick="filterCategory('قاصات')">
                 <div class="cat-icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 3.05a8.003 8.003 0 0 1 6.95 6.95h-6.95zM5.05 13h6.95v6.95A8.003 8.003 0 0 1 5.05 13zm13.9 0h-6.95v6.95a8.003 8.003 0 0 1 6.95-6.95zm-13.9-2h6.95V5.05A8.003 8.003 0 0 1 5.05 11z"/></svg>
+                    <i class="fa-solid fa-vault"></i>
                 </div>
-                <span>الديكور</span>
-            </a>
-            <a class="cat-item" onclick="filterCategory('العروض')">
-                <div class="cat-icon-box">
-                    <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9a2 2 0 0 0 2.82 0l7-7a2 2 0 0 0 0-2.84zM6.5 8A1.5 1.5 0 1 1 8 6.5 1.5 1.5 0 0 1 6.5 8z"/></svg>
-                </div>
-                <span>العروض</span>
+                <span>قاصات</span>
             </a>
         </div>
     </div>
@@ -885,7 +877,7 @@
         </div>
 
         <div class="products-grid" id="products-container">
-            <!-- المنتجات تنزل هنا ديناميكياً من قواعد البيانات -->
+            <!-- المنتجات تنزل هنا ديناميكياً -->
         </div>
     </section>
 
@@ -910,7 +902,7 @@
     <div class="modal-overlay" id="admin-modal">
         <div class="modal-box">
             <span class="close-modal" onclick="toggleAdminModal()">&times;</span>
-            <h3>إدارة المتجر ⚙️</h3>
+            <h3 id="admin-form-title">إضافة / تعديل منتج ⚙️</h3>
             <form class="admin-form" id="product-form" onsubmit="handleProductSubmit(event)">
                 <input type="hidden" id="prod-id">
                 <input type="text" id="prod-name" placeholder="اسم المنتج" required>
@@ -919,13 +911,12 @@
                     <option value="العطور">العطور</option>
                     <option value="المكياج">المكياج</option>
                     <option value="العناية">العناية</option>
-                    <option value="الهدايا">الهدايا</option>
-                    <option value="الإكسسوارات">الإكسسوارات</option>
-                    <option value="الديكور">الديكور</option>
-                    <option value="العروض">العروض</option>
+                    <option value="ايس كوفي">ايس كوفي</option>
+                    <option value="بوكسات">بوكسات</option>
+                    <option value="قاصات">قاصات</option>
                 </select>
                 <input type="file" id="prod-image" accept="image/*">
-                <button type="submit" class="btn-submit">حفظ المنتج</button>
+                <button type="submit" class="btn-submit">حفظ وتأكيد المنتج</button>
             </form>
         </div>
     </div>
@@ -964,9 +955,9 @@
                 </div>
                 <p>متجر إلكتروني يقدم لكِ أفضل المنتجات بأسعار تنافسية وجودة عالية.</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://wa.me/9647809962624" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
 
@@ -1007,7 +998,6 @@
 
     <!-- JS Logic & Supabase Integration -->
     <script>
-        // Supabase Initialization
         const SUPABASE_URL = 'https://mgazzlitioyaoqzheaim.supabase.co';
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1nYXp6bGl0aW95YW9xamhlYWltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNTM3OTMsImV4cCI6MjA3MDkyOTc5M30.6iXpM9M-S5iXj4P5mR9zR9R9R9R9R9R9R9R9R9R9R9R';
         const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -1017,7 +1007,6 @@
         let isAdminLoggedIn = false;
         let currentCategory = 'الكل';
 
-        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             fetchProducts();
             updateCartCount();
@@ -1031,7 +1020,6 @@
             document.getElementById('admin-icon').addEventListener('click', handleAdminLogin);
         });
 
-        // Fetch products from Supabase
         async function fetchProducts() {
             const { data, error } = await _supabase.from('products').select('*').order('created_at', { ascending: false });
             if (!error && data) {
@@ -1040,14 +1028,13 @@
             }
         }
 
-        // Render products
         function renderProducts(filteredList = null) {
             const list = filteredList || (currentCategory === 'الكل' ? products : products.filter(p => p.category === currentCategory));
             const container = document.getElementById('products-container');
             container.innerHTML = '';
 
             if (list.length === 0) {
-                container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 20px; color: #777;">لا توجد منتجات متوفرة حالياً.</div>';
+                container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 20px; color: #777;">لا توجد منتجات متوفرة في هذا القسم.</div>';
                 return;
             }
 
@@ -1071,10 +1058,19 @@
             });
         }
 
-        // Filter Category
         function filterCategory(catName) {
             currentCategory = catName;
             document.getElementById('category-title').innerText = catName === 'الكل' ? 'أفضل المنتجات' : catName;
+            
+            // Highlight current category link
+            document.querySelectorAll('nav a').forEach(el => {
+                if(el.innerText === catName || (catName === 'الكل' && el.innerText === 'الرئيسية')) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+
             renderProducts();
             scrollToProducts();
         }
@@ -1083,14 +1079,12 @@
             document.getElementById('products-sec').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Search
         function handleSearch() {
             const query = document.getElementById('search-input').value.toLowerCase();
             const filtered = products.filter(p => p.name.toLowerCase().includes(query));
             renderProducts(filtered);
         }
 
-        // Cart Actions
         function addToCart(id) {
             const prod = products.find(p => p.id == id);
             if (!prod) return;
@@ -1192,14 +1186,15 @@
             window.open(`https://wa.me/${phoneNum}?text=${encodeURIComponent(text)}`, '_blank');
         }
 
-        // Admin Functionalities
         function handleAdminLogin() {
             if (isAdminLoggedIn) {
+                document.getElementById('product-form').reset();
+                document.getElementById('prod-id').value = '';
                 toggleAdminModal();
                 return;
             }
             const pass = prompt('ادخل رمز الدخول للوحة التحكم:');
-            if (pass === 'Nargsa11') {
+            if (pass === '197654') {
                 isAdminLoggedIn = true;
                 alert('تم تسجيل الدخول بنجاح كأدمن 🔑');
                 renderProducts();
@@ -1221,19 +1216,27 @@
             const category = document.getElementById('prod-category').value;
             const fileInput = document.getElementById('prod-image');
 
-            let imageUrl = 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=500';
+            let imageUrl = '';
+            if (id) {
+                const oldProd = products.find(p => p.id == id);
+                imageUrl = oldProd ? oldProd.image_url : '';
+            }
 
             if (fileInput.files.length > 0) {
                 const file = fileInput.files[0];
                 imageUrl = await convertBase64(file);
             }
 
+            if (!imageUrl) {
+                imageUrl = 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=500';
+            }
+
             if (id) {
-                // Update
-                const { error } = await _supabase.from('products').update({ name, price, category, image_url: imageUrl }).eq('id', id);
+                await _supabase.from('products').update({ name, price, category, image_url: imageUrl }).eq('id', id);
+                alert('تم تعديل المنتج بنجاح! ✨');
             } else {
-                // Create
-                const { error } = await _supabase.from('products').insert([{ name, price, category, image_url: imageUrl }]);
+                await _supabase.from('products').insert([{ name, price, category, image_url: imageUrl }]);
+                alert('تم إضافة المنتج بنجاح! ✨');
             }
 
             document.getElementById('product-form').reset();
@@ -1251,7 +1254,7 @@
         }
 
         async function deleteProduct(id) {
-            if (confirm('هل أنت متاكد من حذف هذا المنتج؟')) {
+            if (confirm('هل أنت متأكد من حذف هذا المنتج؟')) {
                 await _supabase.from('products').delete().eq('id', id);
                 fetchProducts();
             }
